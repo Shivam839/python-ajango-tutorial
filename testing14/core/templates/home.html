@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content%}
+<main class="mt-5">
+    <h3 > Student and their project:--</h3>
+    <table class="table mt-2">
+        <thead>
+          <tr>
+            <th scope="col">Roll Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Adress</th>
+            <th scope="col">Total Project </th>
+            <th scope="col">Descriptiom</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+            {% for project in project %}
+            <tr>
+            <th scope="row">{{project.rollNumber}}</th>
+            <td>{{project.name}}</td>
+            <td>{{project.emailId}}</td>
+            <td>{{project.phoneNumber}}</td>
+            <td>{{project.totalProject}}</td>
+            <td>{{project.address}}</td>
+            <td>{{project.description}}</td>
+        </tr>
+        {% endfor %}
+        
+        </tbody>
+      </table>
+</main>
+
+
+{% endblock content%}

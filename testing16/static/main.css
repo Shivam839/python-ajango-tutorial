@@ -1,0 +1,13 @@
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+h1 {
+  margin: 50px 0 !important;
+  font-style: italic;
+  text-decoration: underline;
+}
+h5 {
+  font-style: italic;
+}

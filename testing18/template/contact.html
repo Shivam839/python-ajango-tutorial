@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<section class="contact_section layout_padding">
+  <div class="container">
+    <div class="heading_container">
+      <h2>Contact Us</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <form action="" method="post">
+          {% csrf_token %}
+          <div>
+            <input
+              style="color: black"
+              type="text"
+              placeholder="Name"
+              name="name"
+            />
+          </div>
+          <div>
+            <input
+              style="color: black"
+              type="text"
+              placeholder="Phone Number"
+              name="number"
+            />
+          </div>
+          <div>
+            <input
+              style="color: black"
+              type="email"
+              placeholder="Email"
+              name="email"
+            />
+          </div>
+          <div>
+            <input
+              style="color: black"
+              type="text"
+              class="message-box"
+              placeholder="Message"
+              name="message"
+            />
+          </div>
+          <div class="d-flex">
+            <button type="submit">SEND</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="map_container">
+          <div class="map">
+            <div id="googleMap" style="width: 100%; height: 100%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
