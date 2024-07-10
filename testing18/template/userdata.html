@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block content %}
+
+<main style="margin: 20px 0">
+    <h2 style="text-align: center; text-transform: capitalize
+    ; text-decoration: underline; margin-bottom: 40px;">
+         User's contact information - 
+
+    </h2>
+  <div class="container d-flex flex-wrap justify-content-evenly w-100 p-10 gap-5">
+
+    {% for user in userdata %}
+
+    <div class="card" style="width: 40%">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Name: </strong>{{user.name}}</h5>
+        <h6 class="card-subtitle mb-2"><strong>Email: </strong>{{user.email}}</h6>
+        <h6 class="card-subtitle mb-2 ">
+            <strong>Number: </strong> {{user.number}}
+        </h6>
+        <p class="card-subtitle mb-2"><strong>Message: </strong>{{user.message}}</p>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</main>
+
+{% endblock content %}

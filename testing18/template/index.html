@@ -21,7 +21,7 @@
                 pariatur, tempora iusto, ad possimus soluta hic praesentium
                 mollitia consequatur beatae, aspernatur culpa.
               </p>
-              <a href=""> Contact Us </a>
+              <a href="{% url "contact" %}"> Contact Us </a>
             </div>
           </div>
           <div class="col-md-6">
@@ -371,7 +371,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <form action="" method="post">
+          <form action="{% url "contact" %}" method="post">
             {% csrf_token %}
             <div>
               <input
@@ -379,6 +379,8 @@
                 type="text"
                 placeholder="Name"
                 name="name"
+                required
+
               />
             </div>
             <div>
@@ -387,6 +389,7 @@
                 type="text"
                 placeholder="Phone Number"
                 name="number"
+                required
               />
             </div>
             <div>
@@ -395,6 +398,7 @@
                 type="email"
                 placeholder="Email"
                 name="email"
+                required
               />
             </div>
             <div>
@@ -403,7 +407,8 @@
                 type="text"
                 class="message-box"
                 placeholder="Message"
-                name="Message"
+                name="message"
+                required
               />
             </div>
             <div class="d-flex">

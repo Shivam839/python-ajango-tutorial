@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Contact
 
 # Create your views here.
@@ -22,6 +22,9 @@ def contact(request):
         )
 
         contact.save()
+        return redirect('thankyou')
+        
+      
 
     context ={
         'title':"Contact Us"
@@ -37,3 +40,16 @@ def service(request):
         'title':"Our Services"
     }
     return render(request,'service.html',context)
+
+def userData(request):
+    context = {
+        'userdata': Contact.objects.all(),
+        "title":"User Data"
+    }
+    return render(request,'userdata.html',context)
+
+def thankyou(request):
+    context={
+        'title':"Thank You!"
+    }
+    return render(request,'thanku.html',context)
